@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = ViewBag.target;
+}
+
+<h2>@ViewBag.target</h2>
+<p>
+    This would be the home page for product <strong>@ViewBag.target</strong>
+</p>
+<p>
+    If product does not exist, redirect to error page
+</p>
+<p>
+   @Html.ActionLink("Features", "Features", "Product", new { target = ViewBag.target }, null)<br />
+   @Html.ActionLink("Technical specs", "Techspecs", "Product", new { target = ViewBag.target }, null)<br />
+</p>

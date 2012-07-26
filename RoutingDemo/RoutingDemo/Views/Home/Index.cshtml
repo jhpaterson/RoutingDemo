@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Acme Products Inc.</h2>
+<p>
+    Welcome to our exciting website
+</p>
+<p>
+    @* generate URL from named route *@
+    @Html.RouteLink("Latest product news", "News", new { action = "Index", controller = "News" })<br /> 
+    @* generate URL from route data *@
+    @Html.ActionLink("Search", "Index", "Search")<br />
+</p>
+<h3>Products</h3>
+<p>
+    @Html.ActionLink("All products", "List", "Product")<br />
+    @Html.ActionLink("gizmo", "Summary", "Product", new { target = "gizmo" }, null)<br />
+    @Html.ActionLink("gadget", "Summary", "Product", new { target = "gadget" }, null)<br />
+    @Html.ActionLink("widget", "Summary", "Product",new{target="widget"},null)<br />
+</p>
+<p>
+    @Html.ActionLink("Admin area", "Index", "Home", new { area = "Admin" },null)<br />
+</p>

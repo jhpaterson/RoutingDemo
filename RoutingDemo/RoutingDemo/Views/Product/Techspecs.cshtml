@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = ViewBag.target + " Technical specs" ;
+}
+
+<h2>@ViewBag.target technical specs</h2>
+<p>
+    This page would show the tech specs for product <strong>@ViewBag.target</strong>
+</p>
+@if(!string.IsNullOrEmpty(ViewBag.format)){
+    <p>
+        Would be returned in <strong>@ViewBag.format</strong> format
+    </p>
+}
+<p>
+    If product does not exist, redirect to error page
+</p>

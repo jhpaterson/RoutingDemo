@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingDemo", "RoutingDemo\RoutingDemo.csproj", "{D28236A4-06DB-44C2-A31E-DA1D96378916}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingDemo.Tests", "RoutingDemo.Tests\RoutingDemo.Tests.csproj", "{CF478EDC-EC84-4524-807D-1E21D459E8F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D28236A4-06DB-44C2-A31E-DA1D96378916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D28236A4-06DB-44C2-A31E-DA1D96378916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D28236A4-06DB-44C2-A31E-DA1D96378916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D28236A4-06DB-44C2-A31E-DA1D96378916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF478EDC-EC84-4524-807D-1E21D459E8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF478EDC-EC84-4524-807D-1E21D459E8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF478EDC-EC84-4524-807D-1E21D459E8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF478EDC-EC84-4524-807D-1E21D459E8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

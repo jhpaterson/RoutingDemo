@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = ViewBag.target + " Features" ;
+}
+
+<h2>@ViewBag.target features</h2>
+<p>
+    This page would show the features for product <strong>@ViewBag.target</strong>
+</p>
+
+@if(!string.IsNullOrEmpty(ViewBag.format)){
+    <p>
+        Would be returned in <strong>@ViewBag.format</strong> format
+    </p>
+}
+
+<p>
+    If product does not exist, redirect to error page
+</p>
+
