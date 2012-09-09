@@ -21,9 +21,9 @@ namespace RoutingDemo
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            // route to custom handler - may have unintended consequences for outgoing routes generated from 
-            routes.Add(new Route("SayHello",
-                new RoutingDemo.Infrastructure.CustomHandlers.CustomeRouteHandler()));
+            // route to custom handler - may have unintended consequences for outgoing routes generated 
+            //routes.Add(new Route("SayHello",
+            //    new RoutingDemo.Infrastructure.CustomHandlers.CustomeRouteHandler()));
 
             routes.MapRoute(
                 "Search", // Route name
@@ -37,7 +37,7 @@ namespace RoutingDemo
 
             routes.MapRoute(
                 "SearchResults", // Route name
-                "search/{target}", // Sample URL: /search/gizmo
+                "searchresults/{target}", // Sample URL: /searchresults/gizmo
                 new
                 {
                     controller = "Search",
