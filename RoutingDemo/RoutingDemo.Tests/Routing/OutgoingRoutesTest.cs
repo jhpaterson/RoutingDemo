@@ -35,7 +35,7 @@ namespace RoutingDemo.Tests.Routing
         }
 
         [TestMethod]
-        public void SearchControllerAndResultsActionRoutesToSearchUrlWithParameter()
+        public void SearchControllerAndIndexActionRoutesToSearchUrl()
         {
             // Arrange
             RouteCollection routes = new RouteCollection();
@@ -47,12 +47,11 @@ namespace RoutingDemo.Tests.Routing
             RequestContext context = new RequestContext(httpContextMock.Object, routeData);
 
             // Act
-            string result = UrlHelper.GenerateUrl("SearchResults", "Results", "Search", 
-                new RouteValueDictionary(new { target = "gizmo" }),
-                routes, context, true);
+            string result = UrlHelper.GenerateUrl("Search", "Index", "Search", 
+                null,routes, context, true);
 
             // Assert
-            Assert.AreEqual("/search/gizmo", result, "Expected a different url");
+            Assert.AreEqual("/search", result, "Expected a different url");
         }
 
         // Helper method - could be in separate class 

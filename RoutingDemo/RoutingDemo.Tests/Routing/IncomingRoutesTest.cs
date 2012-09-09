@@ -44,7 +44,8 @@ namespace RoutingDemo.Tests.Routing
             MvcApplication.RegisterRoutes(routes);
 
             var httpContextMock = new Mock<HttpContextBase>();
-            httpContextMock.Setup(c => c.Request.AppRelativeCurrentExecutionFilePath)
+            httpContextMock.Setup(c => c.Request
+                .AppRelativeCurrentExecutionFilePath)
                 .Returns("~/search");
 
             // Act
@@ -58,29 +59,5 @@ namespace RoutingDemo.Tests.Routing
                 , "Expected a different action");
         }
 
-        [TestMethod]
-        public void SearchUrlWithParameterRoutesToSearchControllerAndResultsAction()
-        {
-            // Arrange
-            RouteCollection routes = new RouteCollection();
-            MvcApplication.RegisterRoutes(routes);
-
-            var httpContextMock = new Mock<HttpContextBase>();
-            httpContextMock.Setup(c => c.Request
-                .AppRelativeCurrentExecutionFilePath)
-                .Returns("~/search/gizmo");
-
-            // Act
-            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
-
-            // Assert
-            Assert.IsNotNull(routeData, "Should have found the route");
-            Assert.AreEqual("Search", routeData.Values["Controller"]
-                , "Expected a different controller");
-            Assert.AreEqual("Results", routeData.Values["action"]
-                , "Expected a different action");
-            Assert.AreEqual("gizmo", routeData.Values["target"]
-                , "Expected a different paremeter");
-        }
     }
 }
