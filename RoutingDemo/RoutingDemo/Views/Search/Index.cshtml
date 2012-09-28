@@ -3,7 +3,11 @@
 }
 
 <h2>Search page</h2>
-<p>
-    This page would display a form to allow user to enter a search term
-</p>
-
+@using (Html.BeginForm("Results", "Search", FormMethod.Post))
+{
+    <p>Enter a search term:
+    </p>
+    <p>@Html.TextBox("target")
+    </p>
+    <p><input type="submit" value="Search" /></p>
+}

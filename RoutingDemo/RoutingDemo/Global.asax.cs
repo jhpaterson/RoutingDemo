@@ -37,12 +37,13 @@ namespace RoutingDemo
 
             routes.MapRoute(
                 "SearchResults", // Route name
-                "searchresults/{target}", // Sample URL: /searchresults/gizmo
+                "searchresults", // Sample URL: /searchresults
                 new
                 {
                     controller = "Search",
                     action = "Results",
-                } // Parameter defaults
+                }, // Parameter defaults
+                new { httpMethod = new HttpMethodConstraint("POST") }  // Lab 2 Ex 2b
             );
 
             routes.MapRoute(
@@ -62,7 +63,11 @@ namespace RoutingDemo
                 {
                     controller = "News",
                     action = "Story",
-                } // Parameter defaults
+                }, // Parameter defaults
+                new
+                {
+                    id = @"^[0-9]{0,4}"
+                } // Lab 2 Ex 2a
             );
 
             routes.MapRoute(

@@ -17,7 +17,7 @@ namespace RoutingDemo.Controllers
         }
 
         //
-        // GET: /Searchresults/target
+        // GET: /Search/target
 
         public ActionResult Results(string target)
         {
